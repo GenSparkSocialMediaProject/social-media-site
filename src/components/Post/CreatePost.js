@@ -22,12 +22,7 @@ export const CreatePost = (props) => {
     }
 
     return (
-    <Card style={{
-                width: "26vw",
-                padding: "20px",
-                margin: "15px",
-                flexDirection: "Column",
-            }}>
+    <Card style={{width: "26vw", padding: "20px", margin: "15px", flexDirection: "Column"}}>
 
         <h2 style={{margin:"auto"}}>Speak your mind!</h2>
         
