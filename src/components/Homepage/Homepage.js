@@ -1,5 +1,7 @@
 import axios from "axios";
 import { Post } from "../Post/Post";
+import { CreatePost } from "../Post/CreatePost";
+
 export const Homepage = (props) => {
     // const posts = axios.get(`${window.location.hostname}/posts`);
     var posts = [
@@ -78,20 +80,23 @@ export const Homepage = (props) => {
     ];
 
     return (
-        <div style={{ alignSelf: "flex-end" }}>
-            {posts.map((post, index) => {
-                return (
-                    <Post
-                        key={index}
-                        username={post.username}
-                        name={post.name}
-                        timestamp={post.timestamp}
-                        upvotes={post.upvotes}
-                        downvotes={post.downvotes}
-                        content={post.content}
-                    />
-                );
-            })}
+        <div style={{ display:"flex", flexGrow: 1 }}>
+            <CreatePost/>
+            <div style={{ alignSelf: "flex-end" }}>
+                {posts.map((post, index) => {
+                    return (
+                        <Post
+                            key={index}
+                            username={post.username}
+                            name={post.name}
+                            timestamp={post.timestamp}
+                            upvotes={post.upvotes}
+                            downvotes={post.downvotes}
+                            content={post.content}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 };

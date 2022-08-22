@@ -43,13 +43,13 @@ export const Post = (props) => {
             <span>{content}</span>
             <ButtonGroup style={{ width: "80px" }}>
                 <Button
-                    style={{ fontSize: "2rem", minWidth: "8rem" }}
+                    style={{ fontSize: "1rem", minWidth: "8rem" }}
                     variant="outline-success"
                 >
                     ↑ {upvotes}
                 </Button>
                 <Button
-                    style={{ fontSize: "2rem", minWidth: "8rem" }}
+                    style={{ fontSize: "1rem", minWidth: "8rem" }}
                     variant="outline-danger"
                 >
                     ↓ {downvotes}
