@@ -80,21 +80,23 @@ export const Homepage = (props) => {
     ];
 
     return (
-        <div style={{ alignSelf: "flex-end" }}>
+        <div style={{ display:"flex", flexGrow: 1 }}>
             <CreatePost/>
-            {posts.map((post, index) => {
-                return (
-                    <Post
-                        key={index}
-                        username={post.username}
-                        name={post.name}
-                        timestamp={post.timestamp}
-                        upvotes={post.upvotes}
-                        downvotes={post.downvotes}
-                        content={post.content}
-                    />
-                );
-            })}
+            <div style={{ alignSelf: "flex-end" }}>
+                {posts.map((post, index) => {
+                    return (
+                        <Post
+                            key={index}
+                            username={post.username}
+                            name={post.name}
+                            timestamp={post.timestamp}
+                            upvotes={post.upvotes}
+                            downvotes={post.downvotes}
+                            content={post.content}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 };

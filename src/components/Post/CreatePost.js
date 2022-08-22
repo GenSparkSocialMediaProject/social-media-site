@@ -22,7 +22,7 @@ export const CreatePost = (props) => {
     }
 
     return (
-    <Card style={{width: "26vw", padding: "20px", margin: "15px", flexDirection: "Column"}}>
+    <Card style={{width: "26vw", minHeight: "60vh", maxHeight: "80vh", padding: "20px", margin: "15px", flexDirection: "Column"}}>
 
         <h2 style={{margin:"auto"}}>Speak your mind!</h2>
         
@@ -31,10 +31,13 @@ export const CreatePost = (props) => {
         <form onSubmit={handleSubmit}>
             <div class="mb-3">
                 <label for="newPost" class="form-label">Text</label>
-                <textarea class="form-control" id="newPost" 
+                <textarea  
+                    style={{maxHeight: "30vh"}}
+                    class="form-control" id="newPost" 
                     rows="6" 
                     maxlength={postMaxLength}
                     placeholder="Tell us what you're thinking.."
+                    
                     onChange={updateCharCount}></textarea>
             </div>
             <p id="charCount">{text.length}/{postMaxLength}</p>
