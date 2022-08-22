@@ -14,8 +14,10 @@ export const CreatePost = (props) => {
         setText(event.target.value);
     }
     
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        
         if(text.length < 1){
+            event.preventDefault();
             return false;
         }
         console.log(text);
