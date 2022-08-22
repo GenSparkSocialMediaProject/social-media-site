@@ -15,7 +15,7 @@ export const Navbar = (props) => {
   }
 
   return (
-    <r.Navbar variant="dark" style={{ maxHeight: "128px" }} bg="dark" fixed="top">
+    <r.Navbar variant="dark" style={{ maxHeight: "100px" }} bg="dark" fixed="top">
       <r.Container>
         <r.Navbar.Brand name="/" href="#">
           <Logo style={{width: "128px", height: "128px", marginTop: "20%"}}/>

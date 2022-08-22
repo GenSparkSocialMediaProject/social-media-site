@@ -1,5 +1,7 @@
 import axios from "axios";
 import { Post } from "../Post/Post";
+import { CreatePost } from "../Post/CreatePost";
+
 export const Homepage = (props) => {
     // const posts = axios.get(`${window.location.hostname}/posts`);
     var posts = [
@@ -79,6 +81,7 @@ export const Homepage = (props) => {
 
     return (
         <div style={{ alignSelf: "flex-end" }}>
+            <CreatePost/>
             {posts.map((post, index) => {
                 return (
                     <Post

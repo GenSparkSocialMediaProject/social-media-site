@@ -10,7 +10,7 @@ import { Post } from "./components/Post/Post";
 
 function App() {
   return (
-    <div style={{ fontSize: "2rem" }}>
+    <div style={{ fontSize: "1rem" }}>
       <Navbar />
       <div
         style={{
